@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="styles.css">
+          <script src="main.js"></script>
+</head>
+<body>
+          <div class="container">
+                    <div class="slide-show">
+                              <img src="images/img_1.jpg" id="img" alt="">
+                    </div>
+                    <div class="button">
+                              <button onclick="Start()">Start</button>
+                              <button onclick="Pause()">Pause</button>
+                    </div>
+
+                    <div class="form">
+                              <form action="">
+                                        <h3 style="text-align: center;">HÓA ĐƠN</h3>
+                                        <label for="">Khách Hàng</label><input type="text" class="input" name="" id=""><span class="notice"></span>
+                                        <br>
+                                        <label for="">Loại Hàng</label>
+                                        <select id="kind-mechandise" onclick="ChangeCost()">
+                                                  <option value="Loại 1">Loại 1</option>
+                                                  <option value="Loại 2">Loại 2</option>
+                                                  <option value="Loại 3">Loại 3</option>
+                                        </select>
+                                        <br>
+                                        <label for="">Đơn Giá</label><input type="text" class="input" name="" id="cost"> <span class="notice"></span>
+                                        <br>
+                                        <label for="">Số Lượng</label><input type="number" onclick="TotalCost()" min="0" class="input" name="" id="quantity"><span class="notice"></span>
+                                        <br>
+                                        <label for="">Thành Tiền</label><input type="text" class="input" name="" id="total"><span class="notice"></span>
+                                        <br>
+                                        <label for="">Nơi Nhận Hàng</label>
+                                        <input type="radio" name="location" value="Nội Thành" onchange="FeeShip()" class="location" id="">Nội Thành
+                                        <input type="radio" name="location" value="Ngoại Thành" onchange="FeeShip()" class="location" id="">Ngoại Thành
+                                        <br>
+                                        <label for="">Phí Vận Chuyển</label><input type="text" class="input" name="" id="feeship" id=""> <span class="notice"></span>
+                                        <br>
+                                        <input type="button" onclick="CheckInput()" style="margin-left: 35%;margin-top: 20px;" value="Đặt Hàng" name="" id="">
+                              </form>
+                    </div>
+          </div>
+</body>
+</html>
